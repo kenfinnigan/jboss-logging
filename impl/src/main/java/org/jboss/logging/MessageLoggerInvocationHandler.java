@@ -60,7 +60,7 @@ class MessageLoggerInvocationHandler extends MessageBundleInvocationHandler {
 
             try {
                 // it's a log message
-                final Logger.Level level = logMessage.level();
+                final Level level = logMessage.level();
                 if (logger.isEnabled(level)) {
                     String formatString = getFormatString(message);
                     if (formatString == null) {

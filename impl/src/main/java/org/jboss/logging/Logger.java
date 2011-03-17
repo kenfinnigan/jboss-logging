@@ -36,18 +36,6 @@ public abstract class Logger implements Serializable, BasicLogger {
 
     private static final String FQCN = Logger.class.getName();
 
-    /**
-     * Levels used by this logging API.
-     */
-    public enum Level {
-        FATAL,
-        ERROR,
-        WARN,
-        INFO,
-        DEBUG,
-        TRACE,
-    }
-
     private final String name;
 
     /**

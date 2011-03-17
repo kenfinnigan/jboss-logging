@@ -22,12 +22,12 @@
 
 package org.jboss.logging;
 
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
-
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * A typed logger method.  Indicates that this method will log the associated {@link Message} to the logger system, as
@@ -45,5 +45,5 @@ public @interface LogMessage {
      *
      * @return the log level
      */
-    Logger.Level level() default Logger.Level.INFO;
+    Level level() default Level.INFO;
 }

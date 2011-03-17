@@ -92,7 +92,8 @@ public final class Messages {
             bundleClass = Class.forName(join(type.getName(), "$bundle", null, null, null), true, type.getClassLoader()).asSubclass(type);
         } catch (ClassNotFoundException e) {
             if (GENERATE_PROXIES) {
-                return type.cast(Proxy.newProxyInstance(type.getClassLoader(), new Class<?>[] { type }, new MessageBundleInvocationHandler(type)));
+                //TODO How to create MessageBundleInvocationHandler instance
+//                return type.cast(Proxy.newProxyInstance(type.getClassLoader(), new Class<?>[] { type }, new MessageBundleInvocationHandler(type)));
             }
             throw new IllegalArgumentException("Invalid bundle " + type + " (implementation not found)");
         }
